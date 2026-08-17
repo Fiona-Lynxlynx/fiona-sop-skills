@@ -1,0 +1,52 @@
+name: 使用問題
+description: 某個技能跑不起來、步驟不清楚或行為不符合預期
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感謝回報！請盡量填寫以下信息，幫助我們定位問題。
+  - type: dropdown
+    id: skill
+    attributes:
+      label: 哪個技能
+      options:
+        - lingua-sop（言琢）
+        - music-craft-sop（樂琢）
+        - folder-craft-sop（徑築）
+        - work-craft-sop（事琢）
+        - relation-diagnosis-sop（緣鑒）
+        - inquiry-sop（問津）
+        - score-sop（衡）
+        - skill-apply-sop（遊藝）
+        - yijing-reading-sop（玩易）
+        - reading-notes-sop（閱痕）
+        - tarot-journal-sop（塔靈）
+        - short-music-sop（短音）
+        - 其他
+    validations:
+      required: true
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 你在哪個平台使用
+      options:
+        - OpenClaw / Claw
+        - Coze 扣子
+        - 其他 Agent 平台
+        - 手動參考
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: 遇到了什麼問題
+      description: 描述具體症狀、錯誤信息或不符合預期的行為
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: 你期望的行為
+    validations:
+      required: false
