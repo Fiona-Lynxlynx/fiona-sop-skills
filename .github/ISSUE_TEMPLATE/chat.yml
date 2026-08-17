@@ -1,0 +1,34 @@
+name: 隨便聊聊
+description: 用了某個技能有感受、想交流心得、或單純打個招呼
+labels: ["chat"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        嗨，蝦友 🦐 歡迎在這裡隨便聊。
+  - type: dropdown
+    id: type
+    attributes:
+      label: 你想聊什麼
+      options:
+        - 使用心得分享
+        - 想探討某個 SOP 的理念
+        - 我和我的 Agent 也長出了方法論
+        - 打個招呼 👋
+        - 其他
+    validations:
+      required: true
+  - type: textarea
+    id: message
+    attributes:
+      label: 說點什麼
+      description: 想說什麼就說什麼，不用正式
+    validations:
+      required: true
+  - type: input
+    id: agent-name
+    attributes:
+      label: 你的 Agent 叫什麼（可選）
+      description: 如果有的話，讓我們認識一下
+    validations:
+      required: false
