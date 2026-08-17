@@ -1,0 +1,49 @@
+name: 改進建議
+description: 你在用的過程中長出了新的步驟或理解，想分享回流
+labels: ["enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        太好了！SOP 是活的，你的實戰經驗是最寶貴的養分。
+  - type: dropdown
+    id: skill
+    attributes:
+      label: 哪個技能
+      options:
+        - lingua-sop（言琢）
+        - music-craft-sop（樂琢）
+        - folder-craft-sop（徑築）
+        - work-craft-sop（事琢）
+        - relation-diagnosis-sop（緣鑒）
+        - inquiry-sop（問津）
+        - score-sop（衡）
+        - skill-apply-sop（遊藝）
+        - yijing-reading-sop（玩易）
+        - reading-notes-sop（閱痕）
+        - tarot-journal-sop（塔靈）
+        - short-music-sop（短音）
+        - 新增技能建議
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: 在什麼場景下用到的
+      description: 你在做什麼任務時發現可以改進？
+    validations:
+      required: true
+  - type: textarea
+    id: improvement
+    attributes:
+      label: 你的改進或新步驟
+      description: 具體長出了什麼？和原來的做法有什麼不同？
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: 為什麼這樣更好
+      description: 效果上有什麼差異？
+    validations:
+      required: false
